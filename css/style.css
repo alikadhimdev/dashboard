@@ -189,9 +189,12 @@ header .icons .user-avatar {
 /* start aside */
 main {
     position: relative;
+    position: absolute;
+    left: 0;
+    top: 74px;
+    width: 100%;
 }
 main .main-con {
-    position: relative;
     height: auto;
     display: flex;
 }
@@ -200,6 +203,7 @@ aside {
     width: 200px;
     box-shadow: 0 0 10px #ddd;
     z-index: 99;
+    margin-top: -74px;
 }
 @media (max-width:768px) {
     aside {
