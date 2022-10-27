@@ -979,7 +979,8 @@ main .content {
     overflow-x: auto;
 }
 .content table {
-    width: 1000px;
+    min-width: 1000px;
+    width: 100%;
 }
 .content table tr td{
     padding:15px;
