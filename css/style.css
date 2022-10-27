@@ -48,6 +48,7 @@ input,textarea,button {
     background-color: var(--blue-color);
     color: white;
     font-size: 14px;
+    text-transform: capitalize;
     padding: 5px 10px;
     border-radius: 10px;
     display: block;
@@ -58,24 +59,59 @@ input,textarea,button {
 .btn-shape:hover {
     background-color: var(--blue-alt-color);
 }
-.toggle-shape {
-    width: 50px;
+.toggle-btn {
+    width: 80px;
     height: 30px;
-    background-color: #0075ff;
 }
-.toggle-shape #controls {
-    /* visibility: hidden; */
+.toggle-btn label {
+    position: relative;
+}
+.toggle-btn label .toggle-checkbox {
     width: 100%;
     height: 100%;
+    visibility: hidden;
+    position: absolute;
 }
-.toggle-shape #controls:checked ~ .toggle {
-    background-color: red;
+.toggle-btn label .toggle-checkbox:checked ~ .toggle-switch{
+    background-color: var(--blue-color);
+    width: 80px;
 }
-.toggle-shape .toggle {
+.toggle-btn label .toggle-checkbox:checked ~ .toggle-switch::before{
+    transform: translateX(50px);
+    color: var(--blue-color);
+    content: "\f00c";
+    font-family: var(--fa-style-family-classic);
+    font-weight: 900;
+}
+.toggle-btn label .toggle-switch{
+    background-color: #ccc;
     width: 100%;
     height: 100%;
-    background-color: #22c55e;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    cursor: pointer;
+
 }
+.toggle-btn label .toggle-switch::before {
+    content: "X";
+    color: black;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    color: var(--grey-color);
+    position: absolute;
+    top: 0;
+    left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    margin-top: 5px;
+}
+
 /* start header */
 
 header {
@@ -988,11 +1024,17 @@ main .content {
 
 /* start setting */
 
+    .settings {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(500px,1fr));
+        gap: 20px;
+    }
 .settings .box {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
 }
+
 .settings .box .title h3 {
     font-size: 25px;
     text-transform: capitalize;
@@ -1016,6 +1058,197 @@ main .content {
     font-size: 12px;
     color: var(--grey-color);
     margin-top: 10px;
+}
+.settings .control .info textarea {
+    margin: 20px 0 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 150px;
+    resize: none;
+}
+.settings .control .info textarea:placeholder-shown {
+    text-transform: capitalize;
+}
+.gen-info form div:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+.gen-info form label {
+    text-transform: capitalize;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: var(--grey-color);
+    font-size: 14px;
+}
+.gen-info form input {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.gen-info form input:placeholder-shown {
+    text-transform: capitalize;
+}
+.gen-info form .email div {
+    display: flex;
+    align-items: center;
+}
+.gen-info form .email input:disabled {
+    cursor: no-drop;
+}
+.gen-info form .email a {
+    display: inline-block;
+    margin: 10px;
+    color: var(--blue-color);
+    text-transform: capitalize;
+}
+
+.security .text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.security .text:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+.security .text .info h4 {
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: normal;
+}
+.security .text .info p {
+    font-size: 14px;
+    color: var(--grey-color);
+}
+.security .devices .btn-shape {
+    background-color: #eee;
+    color: black;
+}
+.settings .social .social-box {
+    background-color: #f6f6f6;
+    display: flex;
+    border: 1px solid #ddd;
+    color: var(--grey-color);
+    border-radius: 6px;
+}
+.settings .social .social-box:not(:last-of-type) {
+    margin-bottom: 15px;
+}
+
+.settings .social .social-box .icon {
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #ddd;
+    transition: var(--transition-dur);
+}
+.settings .social .social-box input {
+    background-color: transparent;
+    padding: 10px;
+}
+.settings .social .social-box:focus-within .icon{
+    color: black;
+}
+.wedgets-cont .wed-controlls div:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+.wedgets-cont .wed-controlls div input {
+    visibility: hidden;
+    height: 100%;
+    /* position: absolute; */
+}
+.wedgets-cont .wed-controlls div label {
+    text-transform: capitalize;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    margin-left: -15px;
+}
+.wedgets-cont .wed-controlls div label:hover::before {
+    border-color: var(--blue-color);
+}
+.wedgets-cont .wed-controlls div label::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    border: 2px solid var(--grey-color);
+    border-radius: 4px;
+}
+.wedgets-cont .wed-controlls div label::after {
+    content: "\f00c";
+    font-family: var(--fa-style-family-classic);
+    font-weight: 900;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 15px;
+    width: 15px;
+    background-color: var(--blue-color);
+    color: white;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(0) scale(0);
+    transition: .3s;
+}
+.wedgets-cont .wed-controlls div input:checked ~ label::before{
+    border-color: var(--blue-alt-color);
+}
+.wedgets-cont .wed-controlls div input:checked ~ label::after{
+    transform: rotate(-360deg) scale(1);
+}
+.settings .backup .date {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.settings .backup .date input {
+    width: 25px;
+    height: 25px;
+}
+.settings .backup .date label {
+    text-transform: capitalize;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.settings .backup .servers {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 20px;
+    gap: 20px;
+}
+@media (max-width: 768px) {
+    .settings .backup .servers {
+        grid-template-columns: 1fr;
+    }
+}
+.settings .backup .servers .server {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform var(--transition-dur);
+}
+.settings .backup .servers .server.active {
+    border: 2px solid var(--blue-alt-color);
+}
+.settings .backup .servers .server:hover {
+    transform: scale(1.05);
+}
+.settings .backup .servers .server span {
+    display: inline-block;
+    margin-top: 10px;
+    text-transform: capitalize;
 }
 /* end setting */
 
