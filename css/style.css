@@ -1321,8 +1321,12 @@ main .content {
     gap: 10px;
     font-size: 13px;
     padding: 10px 20px;
+    transition: background-color var(--transition-dur);
 }
-.general-info div:not(:last-of-type) {
+.general-info > div:hover {
+    background-color: #f9f9f9;
+}
+.general-info > div:not(:last-of-type) {
     border-bottom: 1px solid #eee;
 }
 .general-info div .title {
@@ -1395,11 +1399,11 @@ main .content {
 .profile .skills-activities .activities .cont > div {
     display: flex;
     gap: 20px;
+    padding: 10px;
 }
 .profile .skills-activities .activities .cont > div:not(:last-of-type) {
-    margin-bottom: 20px;
     border-bottom: 1px solid #eee;
-    padding: 10px;
+    margin-bottom: 20px;
 }
 .profile .skills-activities .activities .cont div img {
     width: 50px;
@@ -1470,7 +1474,137 @@ main .content {
 }
 /* end profile */
 
+/* start projects */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px,1fr));
+    gap: 20px;
+}
+@media (max-width:768px) {
+    .projects {
+        grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    }
+}
+.projects .project {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
 
+}
+.projects .project .date {
+    position: absolute;
+    top: 20px;
+    right:  10px;
+    color: var(--grey-color);
+    font-size: 13px;
+}
+.projects .project .title {
+    text-transform: capitalize;
+    font-weight: normal;
+    font-size: 16px;
+}
+.projects .project p {
+    margin: 10px 0;
+    color: var(--grey-color);
+    font-size: 14px;
+}
+.projects .project .imags {
+    position: relative;
+    height: 80px;
+}
+.projects .project .imags a {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+.projects .project .imags a:hover {
+    z-index: 999;
+}
+.projects .project .imags a:first-of-type{
+    left: 0;
+}
+.projects .project .imags a:nth-of-type(2){
+    left: 25px;
+}
+.projects .project .imags a:nth-of-type(3){
+    left: 50px;
+}
+.projects .project .imags a:nth-of-type(4){
+    left: 75px;
+}
+.projects .project .imags a:nth-of-type(5){
+    left: 100px;
+}
+.projects .project .imags a:nth-of-type(6){
+    left: 125px;
+}
+.projects .project .imags img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.projects .project .tags {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    
+}
+@media (max-width:768px) {
+    .projects .project .tags {
+        flex-direction: column;
+    }
+}
+.projects .project .tags span {
+    background-color: #eee;
+    color: black;
+    font-size: 12px;
+    cursor: default;
+}
+.projects .project .progress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.projects .project .progress .prog {
+    width: 250px;
+    height: 8PX;
+    border-radius: 100PX;
+    overflow:hidden ;
+    background-color: #eee;
+    position: relative;
+}
+.projects .project .progress .prog span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 100PX;
+}
+
+.projects .project .progress .prog.blue span {background-color: var(--blue-color);
+}
+.projects .project .progress .prog.green span {background-color: var(--green-color);
+}
+.projects .project .progress .prog.orange span {background-color: var(--orange-color);
+}
+.projects .project .progress .prog.red span {background-color: var(--red-color);
+}
+
+
+
+
+.projects .project .progress .price {
+    color: var(--grey-color);
+}
+/* end projects */
 
 /* start animation */
 @keyframes spark {
