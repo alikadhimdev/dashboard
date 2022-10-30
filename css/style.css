@@ -56,6 +56,12 @@ input,textarea,button {
     cursor: pointer;
     transition: background-color var(--transition-dur);
 }
+.btn-shape.red {
+    background-color: var(--red-color);
+}
+.btn-shape.red:hover {
+    background-color: #df0f00;
+}
 .btn-shape:hover {
     background-color: var(--blue-alt-color);
 }
@@ -1581,6 +1587,12 @@ main .content {
     background-color: #eee;
     position: relative;
 }
+@media (max-width: 768px) {
+    .projects .project .progress {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
 .projects .project .progress .prog span {
     position: absolute;
     top: 0;
@@ -1669,6 +1681,110 @@ main .content {
 }
 /* end courses */
 
+
+/* start friends */
+.friends {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+@media (max-width:400px ) {
+    .friends {
+        grid-template-columns: minmax(200px, 1fr);
+    }
+}
+.friends .friend {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+}
+.friends .friend .icons {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: var(--grey-color);
+}
+.friends .friend .icons .icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #eee;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color var(--transition-dur) , color var(--transition-dur);
+}
+.friends .friend .icons .icon:hover {
+    background-color: var(--blue-color);
+    color: white;
+}
+.friends .friend .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+.friends .friend .info img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.friends .friend .info h3 {
+    text-transform: capitalize;
+    margin: 20px 0 0;
+    font-size: 16px;
+}
+.friends .friend .info p {
+    color: var(--grey-color);
+    font-size: 14px;
+}
+.friends .friend .stats {
+    position: relative;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+.friends .friend .stats .vip {
+    position: absolute;
+    right: 0;
+    font-size: 45px;
+    text-transform: capitalize;
+    color: var(--orange-color);
+    opacity: .2;
+}
+.friends .friend .stats .stat {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.friends .friend .stats .stat .icon {
+    width: 20px;
+}
+.friends .friend .stats .stat span {
+    margin-left: 5px;
+    display: inline-block;
+}
+.friends .friend .date {
+    display: flex;
+    justify-content: space-between;
+}
+.friends .friend .date p {
+    font-size: 14px;
+    text-transform: capitalize;
+    color: var(--grey-color);
+}
+.friends .friend .date .btns {
+    display: flex;
+    gap: 10px;
+}
+.friends .friend .date .btns .btn-shape {
+    font-size: 12px;
+}
+/* end friends */
 
 /* start animation */
 @keyframes spark {
