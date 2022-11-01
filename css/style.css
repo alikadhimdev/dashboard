@@ -1653,7 +1653,8 @@ main .content {
     border: 2px solid white;
 }
 .courses .course .bg {
-    min-width: -webkit-fill-available;;
+    min-width: -webkit-fill-available;
+    min-width: -moz-available;
 }
 .courses .course .text {
     padding: 20px 20px 10px;
