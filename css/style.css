@@ -314,7 +314,7 @@ aside .side-nav li a .icon {
 /* start Dashboard */
 main .content {
     width: calc(100% - 200px);
-    padding: 40px 20px 0;
+    padding: 20px 20px 0;
     overflow-x: hidden;
     min-height: calc(100vh - 74px);
 }
@@ -1788,6 +1788,101 @@ main .content {
 
 /* start files */
 .files {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+}
+@media (max-width:768px) {
+    .files {
+        flex-direction: column;
+    }
+}
+.files .stats {
+    width: 250px;
+    background-color: white;
+    border-radius: 6px;
+    padding: 20px;
+    height: fit-content;
+}
+@media (max-width:768px) {
+    .files .stats  {
+        width: 100%;
+    }
+}
+.files .stats h2 {
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+.files .stats .file-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    border: 1px solid #eee;
+    padding: 10px;
+}
+
+.files .stats .file-stat .icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.files .stats .file-stat.blue .icon {
+    color: var(--blue-color);
+    background-color: rgb(0 117 255 / 20%);
+}
+.files .stats .file-stat.green .icon {
+    color: var(--green-color);
+    background-color: rgb(34 197 94 / 20%);;
+}
+.files .stats .file-stat.red .icon {
+    color: var(--red-color);
+    background-color: rgb(244 67 54 / 20%);;
+}
+.files .stats .file-stat.orange .icon {
+    color: var(--orange-color);
+    background-color: rgb(245 158 11 / 20%);
+}
+.files .stats .file-stat .info {
+    flex: 1;
+    margin-left: 10px;
+}
+.files .stats .file-stat .info p {
+    font-size: 14px;
+}
+.files .stats .file-stat .info span {
+    color: var(--grey-color);
+    font-size: 13px;
+}
+.files .stats .file-stat .size {
+    font-size: 14px;
+    color: var(--grey-color);
+}
+
+.files .stats .btn-shape {
+    margin: 20px auto 0;
+    transition: background-color var(--transition-dur);
+    padding: 10px 15px;
+}
+.files .stats .btn-shape:hover {
+    background-color: var(--blue-alt-color);
+}
+.files .stats .btn-shape i {
+    margin-right: 10px;
+}
+
+.files .stats .btn-shape:hover i {
+    animation: up-down  .3s infinite alternate;
+}
+
+
+
+.files .files-content {
+    flex: 1;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
     gap: 20px;
@@ -1847,5 +1942,14 @@ main .content {
         
         background-color: var(--blue-color);
     }
+}
+@keyframes up-down {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-4px);
+    }
+
 }
 /* end animation */
