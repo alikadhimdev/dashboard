@@ -1037,11 +1037,18 @@ main .content {
 
 /* start setting */
 
-    .settings {
+.settings {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(500px,1fr));
         gap: 20px;
+}
+
+@media (max-width:768px) {
+    .settings {
+        grid-template-columns: minmax(250px,1fr);
     }
+}
+
 .settings .box {
     background-color: white;
     padding: 20px;
@@ -1779,6 +1786,7 @@ main .content {
 }
 .friends .friend .date .btns {
     display: flex;
+    align-items: center;
     gap: 10px;
 }
 .friends .friend .date .btns .btn-shape {
