@@ -133,6 +133,28 @@ aside .side-nav li a .icon {
     right: 20px;
     left: auto;
 }
+
+/* start friends */
+.friends .friend .icons {
+    left: auto;
+}
+.friends .friend .stats .stat span {
+    margin-right: 5px;
+    margin-left: 0;
+}
+/* end friends */
+/* start files */
+.files .file > .icon {
+    left: auto;
+}
+.files .stats .file-stat .info {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+/* end files */
+
+
 /* end courses */
 /*end projects */
 
