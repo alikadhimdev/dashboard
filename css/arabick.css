@@ -111,4 +111,12 @@ aside .side-nav li a .icon {
 }
 /* END SITTING */
 
+/* start profile */
+.personal-info .progress span {
+    right: 0;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+/* end profile */
+
 /* end main content */
