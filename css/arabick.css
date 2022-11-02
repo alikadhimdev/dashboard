@@ -12,6 +12,11 @@ header {
     left: 0;
     right: auto;
 }
+header .icons .navigation,
+header .icons a {
+    margin-left: 20px;
+    margin-right: 0;
+}
 /* end header */
 
 /* start main content */
@@ -87,5 +92,23 @@ aside .side-nav li a .icon {
 }
 /* end dashboard */
 
+/* START SITTING */
+.wedgets-cont .wed-controlls div label {
+    margin-right: 30px;
+    margin-left: 0;
+}
+
+.wedgets-cont .wed-controlls div label::after {
+    left: auto;
+    right: -30px;
+}
+.wedgets-cont .wed-controlls div label::before {
+    left: auto;
+    right: -32px;
+}
+.settings .backup .date label {
+    margin-right: 10px;
+}
+/* END SITTING */
 
 /* end main content */
