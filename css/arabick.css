@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+
+html {
+    direction: rtl;
+}
+body {
+    font-family: 'Amiri', serif;
+}
+
+/* start header */
+header {
+    left: 0;
+    right: auto;
+}
+/* end header */
+
+/* start main content */
+
+/* start aside */
+aside .side-nav li a .icon {
+    margin-left: 10px;
+    margin-right: auto;
+}
+/* end aside */
+
+/* start dashboard */
+.content .content-title::before {
+    right: 0;
+}
+.content .boxes .welcome .btn {
+    margin: 20px auto 20px 20px ;
+}
+.content .boxes .draft form .btn {
+    margin: 0 auto  0 10px;
+}
+.content .boxes .targets .target-boxes .target .icon {
+    margin-left: 20px;
+    margin-right: auto;
+}
+.content .boxes .targets .target-boxes .target .info .progress .bar span {
+    right: auto;
+    left: -15px;
+}
+.news .new .info {
+    margin-right: 20px;
+    margin-left: auto;
+}
+.poroject-pro .proj-img {
+    left: 0;
+    right: auto;
+}
+.reminders .reminder .shape {
+    margin-left: 20px;
+    margin-right: 0;
+}
+.reminders .reminder .shape {
+    border-right-width: 0;
+    border-right-style: none;
+    border-left-width: 2px;
+    border-left-style: solid;
+}
+.reminders .reminder .shape.blue {
+    border-left-color: var(--blue-color);
+}
+.reminders .reminder .shape.green {
+    border-left-color: var(--green-color);
+}
+.reminders .reminder .shape.red {
+    border-left-color: var(--red-color);
+}
+.reminders .reminder .shape.orange {
+    border-left-color: var(--orange-color);
+}
+
+.latest-post .con img,
+.social-media div .icon {
+    margin-left: 20px;
+    margin-right: 0;
+}
+.social-media > div {
+    padding-left: 20px;
+    padding-right: 0;
+}
+.content table tbody .imgs img:not(:first-of-type) {
+    margin-right: -20px;
+    margin-left: 0;
+}
+/* end dashboard */
+
+
+/* end main content */
