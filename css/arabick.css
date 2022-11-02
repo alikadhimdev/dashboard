@@ -127,6 +127,13 @@ aside .side-nav li a .icon {
     left: auto;
 }
 /*start projects */
+
+/* start courses */
+.courses .course .user {
+    right: 20px;
+    left: auto;
+}
+/* end courses */
 /*end projects */
 
 /* end main content */
