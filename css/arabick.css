@@ -46,6 +46,9 @@ aside .side-nav li a .icon {
     right: auto;
     left: -15px;
 }
+.content .boxes .targets .target-boxes .target .info .progress .bar span::before {
+    top: 26px;
+}
 .news .new .info {
     margin-right: 20px;
     margin-left: auto;
@@ -151,7 +154,20 @@ aside .side-nav li a .icon {
     margin-right: 10px;
     margin-left: 10px;
 }
-
+.friends .friend .stats .vip {
+    right:auto;
+    left: 0;
+}
+.files .stats .file-stat .info p {
+    margin-bottom: -10px;
+}
+.files .stats .btn-shape {
+    padding: 5px 15px;
+}
+.files .stats .btn-shape i {
+    margin-left: 10px;
+    margin-right: 0;
+}
 /* end files */
 
 /* start plans */
